@@ -1,12 +1,12 @@
 import PlanExplorer from "./PlanExplorer";
 
 const benefits = [
-  { icon: "24h", title: "Telemedicina", description: "Atendimento médico por vídeo para ter orientação quando mais precisa." },
-  { icon: "♡", title: "Saúde mental", description: "Apoio psicológico para cuidar da mente com acolhimento e constância." },
-  { icon: "+", title: "Consultas e exames", description: "Rede credenciada com preços reduzidos para cuidados presenciais." },
-  { icon: "%", title: "Farmácia", description: "Economia em medicamentos em milhares de farmácias credenciadas." },
-  { icon: "↗", title: "Bem-estar", description: "Nutrição, atividade física e conteúdos para uma rotina mais saudável." },
-  { icon: "◇", title: "Proteção", description: "Opções com seguro acidental e assistência funeral para mais tranquilidade." },
+  { icon: "24h", title: "Orientação médica sem sair de casa", description: "Acesse atendimento por vídeo nos planos elegíveis, conforme as condições de utilização." },
+  { icon: "♡", title: "Apoio para a saúde emocional", description: "Converse com um profissional e mantenha uma rotina de atenção à saúde mental." },
+  { icon: "+", title: "Preços mais acessíveis na rede", description: "Consulte opções de médicos, exames e odontologia com valores reduzidos nos planos elegíveis." },
+  { icon: "%", title: "Economia em medicamentos", description: "Tenha descontos em medicamentos participantes nos estabelecimentos da rede parceira." },
+  { icon: "↗", title: "Hábitos possíveis de manter", description: "Receba apoio de programas de nutrição, atividade física e bem-estar, conforme o plano." },
+  { icon: "◇", title: "Mais tranquilidade para imprevistos", description: "Algumas opções incluem seguro acidental e assistência funeral, conforme as condições contratadas." },
 ];
 
 export default function Home() {
@@ -26,17 +26,17 @@ export default function Home() {
 
       <section className="hero" id="inicio">
         <div className="hero-copy">
-          <p className="eyebrow">Saúde, bem-estar e proteção</p>
-          <h1>Cuidado que acompanha a vida — <em>dentro e fora</em> do trabalho.</h1>
-          <p className="hero-lead">Benefícios acessíveis para empresas cuidarem de suas equipes e para pessoas e famílias viverem com mais saúde, bem-estar e proteção.</p>
+          <p className="eyebrow">Seis opções a partir de R$ 9,90 por mês</p>
+          <h1>Saúde, bem-estar e proteção <em>mais acessíveis</em> para cada fase da vida.</h1>
+          <p className="hero-lead">Compare benefícios para você e sua família ou conheça uma solução personalizada para sua empresa, entidade ou associação.</p>
           <div className="hero-actions">
-            <a className="button" href="#empresas">Solução para empresas <span aria-hidden="true">→</span></a>
-            <a className="button button-ghost" href="#planos">Planos para pessoas</a>
+            <a className="button" href="#planos">Comparar planos e preços <span aria-hidden="true">→</span></a>
+            <a className="button button-ghost" href="#empresas">Solução para empresas</a>
           </div>
           <div className="trust-row" aria-label="Diferenciais da Amore">
-            <span><b aria-hidden="true">✓</b> Planos a partir de R$ 9,90</span>
+            <span><b aria-hidden="true">✓</b> 6 opções de assinatura</span>
             <span><b aria-hidden="true">✓</b> Acesso pelo celular</span>
-            <span><b aria-hidden="true">✓</b> Cuidado para a família</span>
+            <span><b aria-hidden="true">✓</b> Benefícios para diferentes necessidades</span>
           </div>
         </div>
 
@@ -51,37 +51,47 @@ export default function Home() {
       <section className="proof-band" aria-label="Diferenciais dos planos Amore">
         <div><strong>6 planos</strong><span>para diferentes necessidades</span></div>
         <div><strong>24 horas</strong><span>telemedicina nos planos elegíveis</span></div>
-        <div><strong>+5 mil</strong><span>farmácias na rede de desconto</span></div>
-        <div><strong>Até 70%</strong><span>de desconto em exames</span></div>
+        <div><strong>+5 mil</strong><span>estabelecimentos participantes da rede de farmácia</span></div>
+        <div><strong>Até 70%</strong><span>em exames selecionados, conforme rede e localidade</span></div>
+      </section>
+
+      <section className="definition-band" aria-label="O que é a Amore">
+        <p><strong>O que você encontra na Amore?</strong> Opções de benefícios por assinatura que combinam serviços e programas de saúde, bem-estar e proteção. O que está incluído e as regras de utilização variam conforme o plano escolhido.</p>
       </section>
 
       <section className="section audience-section" id="pessoas">
         <div className="section-heading centered-heading compact-heading">
-          <p className="eyebrow">Uma Amore, duas jornadas</p>
-          <h2>Cuidado que faz sentido para quem oferece e para quem usa.</h2>
+          <p className="eyebrow">Escolha como a Amore pode ajudar</p>
+          <h2>Benefícios para você, sua família ou sua equipe.</h2>
         </div>
         <div className="audience-grid">
           <article className="audience-card company-card" id="empresas">
             <span className="audience-label">Para empresas</span>
-            <h3>Um benefício valioso para sua equipe e viável para o seu negócio.</h3>
-            <p>Empresários, lideranças, RH e entidades podem ampliar o cuidado com colaboradores e associados em uma solução simples de comunicar e usar.</p>
+            <h3>Um benefício relevante não precisa criar uma operação complexa.</h3>
+            <p>A Amore ajuda empresários, lideranças, RH e entidades a estruturar uma proposta adequada ao perfil da organização e mais simples de comunicar.</p>
             <ul><li>Proposta personalizada</li><li>Saúde física e emocional</li><li>Apoio à estratégia de bem-estar</li></ul>
             <a className="text-link light-link" href="#corporativo">Conhecer o Amore Corporativo <span aria-hidden="true">→</span></a>
           </article>
           <article className="audience-card people-card">
             <span className="audience-label">Para pessoas e famílias</span>
-            <h3>Mais acesso à saúde, bem-estar e proteção sem pesar no orçamento.</h3>
-            <p>Escolha a combinação de benefícios que mais combina com a sua rotina e tenha cuidado acessível na palma da mão.</p>
+            <h3>Resolver cada necessidade separadamente pode pesar no orçamento.</h3>
+            <p>Compare seis combinações de benefícios e encontre uma rota mais clara para acessar saúde, bem-estar e proteção pelo celular.</p>
             <ul><li>Seis opções de assinatura</li><li>Planos a partir de R$ 9,90/mês</li><li>Uso simples pelo celular</li></ul>
             <a className="text-link" href="#planos">Explorar os planos <span aria-hidden="true">→</span></a>
           </article>
         </div>
       </section>
 
+      <section className="journey-strip" aria-label="Como começar com a Amore">
+        <div><span>01</span><strong>Compare</strong><p>Veja necessidades, benefícios e preços antes de conversar com o atendimento.</p></div>
+        <div><span>02</span><strong>Escolha</strong><p>Identifique a opção mais adequada para sua rotina ou solicite uma proposta corporativa.</p></div>
+        <div><span>03</span><strong>Ative e utilize</strong><p>Receba as orientações de acesso e encontre no celular os serviços do plano contratado.</p></div>
+      </section>
+
       <section className="section benefits-section" id="beneficios">
         <div className="section-heading split-heading">
-          <div><p className="eyebrow">Cuidado completo</p><h2>Muitas formas de cuidar, reunidas em uma só experiência.</h2></div>
-          <p>Dos cuidados do dia a dia à proteção para momentos importantes, a Amore conecta serviços que atendem diferentes fases da vida.</p>
+          <div><p className="eyebrow">O que os benefícios permitem</p><h2>Mais acesso, apoio emocional, economia e proteção.</h2></div>
+          <p>Cada plano reúne uma combinação diferente. Entenda primeiro o resultado que você procura e depois confira as condições de cada benefício.</p>
         </div>
         <div className="benefit-grid">
           {benefits.map((benefit) => <article className="benefit-card" key={benefit.title}><span className="benefit-icon" aria-hidden="true">{benefit.icon}</span><h3>{benefit.title}</h3><p>{benefit.description}</p></article>)}
@@ -90,8 +100,8 @@ export default function Home() {
 
       <section className="section plans-section" id="planos">
         <div className="section-heading split-heading plans-heading">
-          <div><p className="eyebrow">Planos Amore</p><h2>Encontre o cuidado que combina com você.</h2></div>
-          <p>Compare benefícios, valores e escolha o plano mais adequado para o seu momento. Para empresas, construímos uma proposta sob medida.</p>
+          <div><p className="eyebrow">Planos Amore</p><h2>Compare por necessidade, benefício e preço.</h2></div>
+          <p>Veja o que cada opção inclui antes de falar com o atendimento. Para empresas e entidades, a proposta é construída de acordo com o perfil da organização.</p>
         </div>
         <PlanExplorer />
       </section>
@@ -106,8 +116,8 @@ export default function Home() {
           </div>
         </div>
         <div className="app-copy">
-          <p className="eyebrow">Cuidado na palma da mão</p>
-          <h2>Ative, acesse e use seus benefícios pelo celular.</h2>
+          <p className="eyebrow">Escolha, ative e utilize</p>
+          <h2>Seus benefícios disponíveis pelo celular.</h2>
           <p>A jornada acontece no app TEM Saúde: após a contratação, o beneficiário recebe as orientações de acesso e encontra os serviços disponíveis em seu plano.</p>
           <ol className="mini-steps">
             <li><span>1</span><div><strong>Ative seu acesso</strong><p>Use CPF e token recebido para criar sua senha.</p></div></li>
@@ -120,8 +130,8 @@ export default function Home() {
       <section className="section corporate-section" id="corporativo">
         <div className="corporate-copy">
           <p className="eyebrow">Amore Corporativo</p>
-          <h2>Cuidado com as pessoas também é estratégia de negócio.</h2>
-          <p>Uma solução para empresas de diferentes portes oferecerem saúde, bem-estar e proteção a colaboradores, associados e suas famílias — com uma proposta adequada ao perfil de cada organização.</p>
+          <h2>Ofereça um benefício relevante sem perder a flexibilidade.</h2>
+          <p>Amplie o acesso de colaboradores, associados e familiares a serviços de saúde, bem-estar e proteção com uma proposta adequada ao perfil e ao orçamento da organização.</p>
           <div className="corporate-points"><span>Valor percebido pela equipe</span><span>Apoio à saúde e ao bem-estar</span><span>Proposta personalizada</span></div>
           <a className="button" href="#contato">Solicitar proposta empresarial</a>
         </div>
@@ -133,8 +143,23 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section faq-section" id="duvidas">
+        <div className="section-heading split-heading faq-heading">
+          <div><p className="eyebrow">Antes de escolher</p><h2>Respostas para decidir com mais clareza.</h2></div>
+          <p>As condições específicas de utilização, elegibilidade e disponibilidade devem ser confirmadas para o plano e a localidade escolhidos.</p>
+        </div>
+        <div className="faq-list">
+          <details><summary>O que exatamente a Amore oferece?<span>+</span></summary><p>A Amore reúne opções de benefícios por assinatura. Cada plano combina serviços e programas de saúde, bem-estar e proteção diferentes, com acesso orientado pelo celular.</p></details>
+          <details><summary>O que está incluído na mensalidade?<span>+</span></summary><p>Os itens incluídos variam por plano. Alguns programas e atendimentos estão contemplados na assinatura; consultas presenciais, exames, odontologia e medicamentos podem ser acessados com preços reduzidos e pagamento adicional, conforme a rede.</p></details>
+          <details><summary>Como começo a utilizar?<span>+</span></summary><p>Após a contratação, o beneficiário recebe as orientações de acesso. A ativação informada pela operação utiliza CPF e token para criação da senha no app TEM Saúde.</p></details>
+          <details><summary>Os serviços estão disponíveis em todas as cidades?<span>+</span></summary><p>A disponibilidade pode variar conforme benefício, prestador, rede e localidade. Confirme a cobertura e as opções disponíveis para sua região antes de contratar ou agendar.</p></details>
+          <details><summary>Como funcionam os descontos?<span>+</span></summary><p>Os percentuais dependem do serviço, procedimento, estabelecimento e rede participante. A referência de até 70% se aplica a exames selecionados, conforme rede e localidade.</p></details>
+          <details><summary>Como funciona para empresas e entidades?<span>+</span></summary><p>A Amore entende o perfil da organização, estrutura uma proposta de benefícios e orienta o processo de implantação e comunicação. O primeiro passo é solicitar uma conversa com a equipe comercial.</p></details>
+        </div>
+      </section>
+
       <section className="final-cta" id="contato">
-        <div><span className="heart-seal" aria-hidden="true">♡</span><p className="eyebrow">Por onde você quer começar?</p><h2>A Amore tem um caminho para sua empresa, para você e para sua família.</h2>
+        <div><span className="heart-seal" aria-hidden="true">♡</span><p className="eyebrow">Escolha seu próximo passo</p><h2>Compare os planos ou encontre uma solução para sua organização.</h2>
           <div className="contact-paths">
             <a className="button" href="https://wa.me/5591992119998?text=Ol%C3%A1%2C%20quero%20conhecer%20a%20solu%C3%A7%C3%A3o%20corporativa%20da%20Amore.">Sou uma empresa <span aria-hidden="true">→</span></a>
             <a className="button button-ghost" href="https://wa.me/5591992119998?text=Ol%C3%A1%2C%20quero%20conhecer%20os%20planos%20da%20Amore%20para%20pessoas%20e%20fam%C3%ADlias.">Quero um plano <span aria-hidden="true">→</span></a>
