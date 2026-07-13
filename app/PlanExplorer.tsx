@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 type Plan = {
@@ -7,6 +8,8 @@ type Plan = {
   name: string;
   price: string;
   summary: string;
+  image: string;
+  imageAlt: string;
   benefits: string[];
   categories: string[];
 };
@@ -17,6 +20,8 @@ const plans: Plan[] = [
     name: "Amore Protege",
     price: "9,90",
     summary: "Uma porta de entrada para cuidar da mente, do corpo e da rotina.",
+    image: "/plans/amore-protege-cover.webp",
+    imageAlt: "Pessoa em uma rotina de autocuidado, atividade física e bem-estar",
     benefits: [
       "Plataforma de bem-estar com mais de 5 mil conteúdos em vídeo, academias pay-per-use e assistente digital",
       "Programa de hábitos saudáveis com atendimento mensal de nutricionista, personal trainer e psicólogo",
@@ -29,6 +34,8 @@ const plans: Plan[] = [
     name: "Amore Mulher",
     price: "11,90",
     summary: "Cuidado para a mulher e sua família em diferentes fases da vida.",
+    image: "/plans/amore-mulher-cover.webp",
+    imageAlt: "Três gerações de mulheres reunidas em um momento de cuidado e afeto",
     benefits: [
       "Clínico geral por vídeo com agendamento e pronto atendimento 24/7, conforme as condições de utilização",
       "Atendimento 24/7 em saúde da mulher, obstetrícia e pediatria",
@@ -43,6 +50,8 @@ const plans: Plan[] = [
     name: "Amore Saúde",
     price: "16,90",
     summary: "Acesso presencial a cuidados de saúde com preços reduzidos.",
+    image: "/plans/amore-saude-cover.webp",
+    imageAlt: "Beneficiária sendo acolhida em um centro de saúde moderno",
     benefits: [
       "Rede de clínicas e médicos particulares para consultas presenciais com preços reduzidos",
       "Mais de 1.500 tipos de exames, com até 70% de desconto em procedimentos selecionados, conforme rede e localidade",
@@ -55,6 +64,8 @@ const plans: Plan[] = [
     name: "Amore Vida",
     price: "19,90",
     summary: "Saúde imediata e proteção financeira para momentos delicados.",
+    image: "/plans/amore-vida-cover.webp",
+    imageAlt: "Mãe usando atendimento por vídeo ao lado dos filhos em casa",
     benefits: [
       "Clínico geral por vídeo com agendamento e pronto atendimento 24/7, conforme as condições de utilização",
       "Seguro de R$ 10 mil em caso de morte acidental ou invalidez total permanente por acidente",
@@ -67,6 +78,8 @@ const plans: Plan[] = [
     name: "Amore Saúde Completa",
     price: "29,90",
     summary: "Uma combinação ampla de saúde presencial, digital e bem-estar.",
+    image: "/plans/amore-saude-completa-cover.webp",
+    imageAlt: "Casal integrando saúde digital, atividade física e cuidado cotidiano",
     benefits: [
       "Rede de consultas, exames e dentistas com preços reduzidos em todo o Brasil",
       "Clínico geral por vídeo com pronto atendimento 24/7, conforme as condições de utilização",
@@ -81,6 +94,8 @@ const plans: Plan[] = [
     name: "Amore 360",
     price: "35,90",
     summary: "Saúde, bem-estar, economia e proteção reunidos em uma assinatura.",
+    image: "/plans/amore-360-cover.webp",
+    imageAlt: "Família multigeracional reunida em uma rotina ativa e saudável",
     benefits: [
       "Clínico geral por vídeo com pronto atendimento 24/7, conforme as condições de utilização",
       "A partir de 15% de desconto em medicamentos participantes em mais de 5 mil estabelecimentos da rede parceira",
@@ -152,18 +167,30 @@ export default function PlanExplorer() {
       </div>
 
       <article className="plan-detail" id="plan-panel" role="tabpanel">
-        <div className="plan-detail-intro">
-          <p className="plan-number">Plano {String(plans.indexOf(active) + 1).padStart(2, "0")}</p>
-          <h3>{active.name}</h3>
-          <p>{active.summary}</p>
-          <div className="plan-price"><span>R$</span><strong>{active.price}</strong><small>/mês</small></div>
-          <a className="button" href={`https://wa.me/5591992119998?text=${encodeURIComponent(`Olá, quero tirar dúvidas sobre o ${active.name}.`)}`}>Tirar dúvidas sobre este plano <span aria-hidden="true">→</span></a>
+        <div className="plan-cover">
+          <Image
+            key={active.image}
+            className="plan-cover-image"
+            src={active.image}
+            alt={active.imageAlt}
+            fill
+            sizes="(max-width: 860px) 100vw, (max-width: 1280px) 42vw, 510px"
+          />
+          <span className="plan-cover-number">Plano {String(plans.indexOf(active) + 1).padStart(2, "0")}</span>
         </div>
-        <div className="plan-benefits">
-          <p className="plan-benefits-title">O que está incluído</p>
-          <ul>{active.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}</ul>
-          <div className="category-tags" aria-label="Categorias do plano">
-            {active.categories.map((category) => <span key={category}>{category}</span>)}
+        <div className="plan-detail-content">
+          <div className="plan-detail-intro">
+            <h3>{active.name}</h3>
+            <p>{active.summary}</p>
+            <div className="plan-price"><span>R$</span><strong>{active.price}</strong><small>/mês</small></div>
+            <a className="button" href={`https://wa.me/5591992119998?text=${encodeURIComponent(`Olá, quero tirar dúvidas sobre o ${active.name}.`)}`}>Tirar dúvidas sobre este plano <span aria-hidden="true">→</span></a>
+          </div>
+          <div className="plan-benefits">
+            <p className="plan-benefits-title">O que está incluído</p>
+            <ul>{active.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}</ul>
+            <div className="category-tags" aria-label="Categorias do plano">
+              {active.categories.map((category) => <span key={category}>{category}</span>)}
+            </div>
           </div>
         </div>
       </article>
