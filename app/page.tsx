@@ -167,10 +167,42 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <div className="footer-brand"><img src="/amore-logo.svg" alt="Amore" /><p>Saúde, bem-estar e proteção para empresas, pessoas e famílias.</p></div>
-        <div className="footer-links"><div><strong>Explore</strong><a href="#empresas">Para empresas</a><a href="#pessoas">Para pessoas</a><a href="#planos">Planos</a></div><div><strong>Contato</strong><a href="tel:+5591992119998">(91) 99211-9998</a><a href="mailto:comercial@amore-saude.com">comercial@amore-saude.com</a></div></div>
-        <div className="footer-bottom"><span>© 2026 Amore Benefícios</span><span>Saúde, bem-estar e proteção em cada fase da vida.</span></div>
+      <footer className="site-footer">
+        <div className="footer-main">
+          <div className="footer-brand">
+            <a href="#inicio" aria-label="Amore — voltar ao início"><img src="/amore-logo.svg" alt="Amore" /></a>
+            <p>Saúde, bem-estar e proteção para empresas, pessoas e famílias.</p>
+            <span>Benefícios para cuidar de quem importa.</span>
+          </div>
+
+          <nav className="footer-links" aria-label="Navegação do rodapé">
+            <div>
+              <strong>Para você</strong>
+              <a href="#pessoas">Pessoas e famílias</a>
+              <a href="#beneficios">Benefícios</a>
+              <a href="#planos">Planos e preços</a>
+              <a href="#como-usar">Como utilizar</a>
+            </div>
+            <div>
+              <strong>Para organizações</strong>
+              <a href="#empresas">Visão para empresas</a>
+              <a href="#corporativo">Solução corporativa</a>
+              <a href="#duvidas">Dúvidas frequentes</a>
+            </div>
+            <div className="footer-contact">
+              <strong>Fale com a Amore</strong>
+              <p>Atendimento comercial para pessoas e organizações.</p>
+              <a href="tel:+5591992119998"><small>Telefone e WhatsApp</small><span>(91) 99211-9998</span></a>
+              <a href="mailto:comercial@amore-saude.com"><small>E-mail</small><span>comercial@amore-saude.com</span></a>
+            </div>
+          </nav>
+        </div>
+
+        <div className="footer-bottom">
+          <span>© 2026 Amore Benefícios</span>
+          <span>Saúde, bem-estar e proteção em cada fase da vida.</span>
+          <a href="#inicio">Voltar ao topo <span aria-hidden="true">↑</span></a>
+        </div>
       </footer>
     </main>
   );
